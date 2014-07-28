@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angels</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+	<link href="css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
+  <link href="css/global.css" rel="stylesheet" type="text/css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+	<script src="assets/countdown/jquery.countdown.js"></script>
+	<script src="assets/js/script.js"></script>
+   <script type="text/javascript" async src="http://app.comagic.ru/static/cs.min.js"></script>
+   <script src="js/slides.min.jquery.js"></script>
+   <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+	
+   <script>
+      //Маска телефонного номера
+      jQuery(function($){
+         $(".phone-mask").mask("+9(999) 999-99-99",{placeholder:"_"});
+      });
+
+   </script>
+   <script>
+   function AjaxFormRequest(form_id) { 
+            jQuery.ajax({ 
+                   url:    'hendler.php', //Адрес подгружаемой страницы 
+                   type:     "POST", //Тип запроса 
+                   dataType: "html", //Тип данных 
+                   data: jQuery("#"+form_id).serialize(),  
+                   success: function(response) { //Если все нормально 
+                     alert("Спасибо! Заявка была отправлена");
+                     $("#dw_catalog .close").click();
+                     $("#"+form_id+"_reset").click();
+                     
+                   }, 
+                   error: function(response) { //Если ошибка 
+                         alert("Произошла ошибка при отправке. Попробуйте снова!");
+                   } 
+            });
+         }
+   </script>
+   <script>
+    var cnvs = document.getElementById('canvas');
+    var crx = cnvs.getContext("5");
+    crx.restore();
+    var img = document.createElement('img');
+    img.onload = function () {
+    crx.fillStyle = crx.createPattern(img, 'repeat');
+    crx.font = 'bold 100px sans-serif';
+    crx.fillText("Красота", 50, 120);
+    };
+    img.src = '1.jpg';
+  </script>
+</head>
+<body>
+	<section class="block_1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<div class="pull-left"><i class="icon"></i><span class="logo"></span></div>
+					
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<div class="pull-right"><span class="time"><br /></span><span class="phone"></span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<h2 class="title">
+						<span class="left-side">
+							<span>1</span>
+							<span>2</span>
+						</span>
+						<span class="right-sie">3</span>
+					</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<img src="item_1" />
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="form">
+						<p class="title"></p>
+						<p class="subTitle"></p>
+						<div id="countdown"></div>
+						<input class="nameI" type="text" placeholder=""  />
+						<input class="phoneI" type="text" placeholder=""  />
+						<button type="button" class="selfBtn" value=""></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<a href="" class="button"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<a href="" class="button"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="display_table center">
+						<img src="img/icon_1" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="">
+						<p class="title"></p>
+						<img src="img/icon_1" />
+						<p class="desc"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<a href="" class="button"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_6">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-8 col-xs-12">
+					<p class="title"></p>
+					<p class="subTitle"></p>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="form">
+						<p class="title"></p>
+						<p class="subTitle"></p>
+						<div id="countdown"></div>
+						<input class="nameI" type="text" placeholder=""  />
+						<input class="phoneI" type="text" placeholder=""  />
+						<button type="button" class="selfBtn" value=""></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_7">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<a href="#"><img src="" /></a>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<a href="#"><img src="" /></a>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<a href="#"><img src="" /></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_8">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="holder">
+						<p class="name"></p>
+						<img src="" class="img_rouned" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="holder">
+						<p class="name"></p>
+						<img src="" class="img_rouned" />
+						<p class="desc"></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="holder">
+						<p class="name"></p>
+						<img src="" class="img_rouned" />
+						<p class="desc"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_9">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					pull
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<p class="upper"></p>
+					<img src="" />
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<p class="upper"></p>
+					<img src="" />
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<p class="upper"></p>
+					<img src="" />
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					pull
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					pull
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<img src="" />
+					<p class="lower"></p>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<img src="" />
+					<p class="lower"></p>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<img src="" />
+					<p class="lower"></p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					pull
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_10">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					used owl slider only owl!
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_11">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					map
+					<div class="holder">
+						<p class="title"></p>
+						<p class="phone"><i class="icon display_inBlock vMiddle"></i><span class="display_inBlock vMiddle"></span></p>
+						<p>mail</p>
+						<p>adress</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block_12">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					foobar
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
