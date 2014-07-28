@@ -1,0 +1,55 @@
+@font-face {
+    font-family: RR; /* имя шрифта для CSS правил */
+    src: local("Roboto-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Roboto-Regular.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+@font-face {
+    font-family: R_Bold; /* имя шрифта для CSS правил */
+    src: local("Roboto-Bold"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Roboto-Bold.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+@font-face {
+	font-family: R_Light; /* имя шрифта для CSS правил */
+	src: local("Roboto-Light"), /* проверяем наличие шрифта в ОС пользователя */
+	     url(../fonts/Roboto-Light.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+.display {
+	&_table {
+		display: table;
+		
+		&.center {
+			margin: 0 auto;
+		}
+	}
+	&_inBlock {
+		&.vMiddle {
+			vertical-align: middle;
+		}
+		&.vTop {
+			vertical-align: top;
+		}
+		&.vBot {
+			vertical-align: bottom;
+		}
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 640px) { 
+	.col-xs-1,
+	.col-xs-2,
+	.col-xs-3,
+	.col-xs-4,
+	.col-xs-5,
+	.col-xs-6,
+	.col-xs-7,
+	.col-xs-8,
+	.col-xs-9,
+	.col-xs-10,
+	.col-xs-11,
+	.col-xs-12 {
+		width: 100% !important;
+	}
+	/*обнуляем Extra-small что бы были стаки и нормально смотрелось под гейфоны до 640px*/
+}
+@media screen and (min-width: 640px) and (max-width: 768px) { /*код под тф+планшеты*/ }
+@media screen and (min-width: 768px) and (max-width: 992px) { /*код планшеты+нетбуки+10-13 дюймов*/ }
